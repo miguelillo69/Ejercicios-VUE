@@ -7,7 +7,7 @@ export default {
     },
     methods: {
         delTodos() {
-            store.delTodos()
+            store.delTodosInServer()
         }
     }
 }

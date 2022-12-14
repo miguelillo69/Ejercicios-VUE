@@ -10,7 +10,7 @@ export default {
     },
     methods: {
         addTodo() {
-            store.addTodo(this.newTodo)
+            store.addTodoInServer(this.newTodo)
             this.newTodo = ''
         }
     }

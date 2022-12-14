@@ -9,7 +9,7 @@ export default {
   },
   methods: {
     borrarItem(id) {
-     store.borrarItem(id)
+     store.delItemInServer(id)
     },
   },
   components: {

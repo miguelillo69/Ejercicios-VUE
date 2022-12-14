@@ -1,4 +1,6 @@
 <script>
+import { store } from "../store";
+
 export default {
     props: ['todo'],
     template: ``,
@@ -10,12 +12,15 @@ export default {
         delTodo() {
             this.$emit('borrame', this.todo.id)
         },
+        cambiarDone(todo) {
+            store.cambiarDone(todo)
+        }
     }
 }
 </script>
 <template>
     <li @dblclick="delTodo(todo.id)">
-        <input type="checkbox" v-model="todo.done" />
+        <input type="checkbox" :checked="todo.done" @change="cambiarDone(todo)" />
         <del v-if="todo.done"> {{ todo.title }} </del>
         <span v-else> {{ todo.title }} </span>
     </li>

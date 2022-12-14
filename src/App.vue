@@ -3,6 +3,7 @@ import AppDelTodos from "./components/AppDelTodos.vue";
 import AddTodo from "./components/AddTodo.vue";
 import ListarTodos from "./components/ListarTodos.vue";
 import AppTitle from "./components/AppTitle.vue";
+import { store } from "./store";
 
 export default {
   components: {
@@ -10,6 +11,9 @@ export default {
     AppDelTodos,
     AppTitle,
     ListarTodos
+  },
+  mounted() {
+    store.listarTodosInServer()
   }
 }
 </script>
